@@ -65,7 +65,6 @@ In this app, a user views a newspaper layout, in a jagged puzzle of headlines an
    * User can click start on the podcast to listen to it
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
 <img src="Screen Shot 2021-07-07 at 10.27.48 AM.png" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
