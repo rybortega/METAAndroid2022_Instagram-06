@@ -15,4 +15,13 @@ android:layout_height="wrap_content"
 android:id="@+id/username"
 android:text="main screen"
     />
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/logOut"
+        android:onClick="handleLogOut"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="Log Out"
+        />
 </RelativeLayout>

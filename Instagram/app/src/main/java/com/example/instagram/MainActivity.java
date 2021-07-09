@@ -1,12 +1,15 @@
 package com.example.instagram;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentActivity;
 
 import com.parse.ParseObject;
+import com.parse.ParseUser;
 
 /*
  * Main Activity class that loads {@link MainFragment}.
@@ -26,6 +29,13 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("MainActivity","Object saved.");
             }
         });
+    }
+
+    public void handleLogOut(View view){
+        ParseUser.logOut();
+        ParseUser currentUser = ParseUser.getCurrentUser(); // this will now be null
+        Intent i = new Intent(MainActivity.this, LoginActivity.class);
+        startActivity(i);
     }
 }
 /*
