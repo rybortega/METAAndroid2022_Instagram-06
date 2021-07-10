@@ -1,19 +1,18 @@
 package com.example.instagram;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
+import android.os.Parcelable;
 
-import com.parse.Parse;
 import com.parse.ParseClassName;
 import com.parse.ParseFile;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
 
-import org.jetbrains.annotations.NotNull;
+import org.parceler.Parcel;
 
-//@Parcel(analyze=Model.class)
+
 @ParseClassName("Post")
-public class Post extends ParseObject {
+@Parcel(analyze=Post.class)
+public class Post extends ParseObject implements Parcelable {
 
     public static final String KEY_DESCRIPTION = "Caption";
     public static final String KEY_IMAGE = "Image";
@@ -34,7 +33,6 @@ public class Post extends ParseObject {
     public void setImage(ParseFile parseFile){
         put(KEY_IMAGE, parseFile);
     }
-
 
     public ParseUser getUser() {
         return getParseUser(KEY_USER);

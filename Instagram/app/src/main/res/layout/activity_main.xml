@@ -45,4 +45,12 @@
         android:layout_alignParentRight="true"
         android:text="Log Out"
         />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View Feed"
+        android:id="@+id/viewFeed"
+        android:layout_below="@+id/submit"
+        android:onClick="handleViewFeed"
+        />
 </RelativeLayout>

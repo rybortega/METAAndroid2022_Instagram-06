@@ -90,7 +90,6 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "there is no image data!", Toast.LENGTH_SHORT).show();
                 }
                 ParseUser currentUser = ParseUser.getCurrentUser();
-                Toast.makeText(MainActivity.this, "About to save post", Toast.LENGTH_SHORT).show();
                 savePost(description, currentUser, photoFile);
 
             }
@@ -201,20 +200,12 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(MainActivity.this, LoginActivity.class);
         startActivity(i);
     }
-}
-/*
-public class MainActivity extends FragmentActivity {
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.main_browse_fragment, new MainFragment())
-                    .commitNow();
-        }
+    public void handleViewFeed(View view){
+        Intent intent = new Intent(MainActivity.this, FeedActivity.class);
+        startActivity(intent);
+
     }
+
 }
 
- */
