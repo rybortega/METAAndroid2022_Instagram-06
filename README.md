@@ -1,81 +1,83 @@
-Original App Design Project - README Template
-===
+# Project 4 - *Instagram*
 
-# Pod Paper
+**Instagram** is a photo sharing app using Parse as its backend.
 
-## Table of Contents
-1. [Overview](#Overview)
-1. [Product Spec](#Product-Spec)
-1. [Wireframes](#Wireframes)
-2. [Schema](#Schema)
+Time spent: **20** hours spent in total
 
-## Overview
-### Description
-In this app, a user views a newspaper layout, in a jagged puzzle of headlines and descriptions. However, when a use clicks on an article, They will hear a podcast instead of listening to an article. 
+## User Stories
 
-### App Evaluation
-[Evaluation of your app across the following attributes]
-- **Category: news/entertainment**
-- **Mobile: for androids**
-- **Story: A user can view news stories and listen ot them as podcasts**
-- **Market: People who like to listen to podcasts**
-- **Habit: The app is hopefully habit-forming, as people will revisit the app to see news**
-- **Scope: The focus is relatively narrow, just listening to news stories**
+The following **required** functionality is completed:
 
-## Product Spec
+- [x] User sees app icon in home screen.
+- [x] User can sign up to create a new account using Parse authentication
+- [x] User can log in to his or her account
+- [x] The current signed in user is persisted across app restarts
+- [x] User can log out of his or her account
+- [x] User can take a photo, add a caption, and post it to "Instagram"
+- [x] User can view the last 20 posts submitted to "Instagram"
+- [x] User can pull to refresh the last 20 posts submitted to "Instagram"
+- [x] User can tap a post to go to a Post Details activity, which includes timestamp and caption.
+- [x] User sees app icon in home screen
 
-### 1. User Stories (Required and Optional)
+The following **stretch** features are implemented:
 
-**Required Must-have Stories**
+- [ ] Style the login page to look like the real Instagram login page.
+- [ ] Style the feed to look like the real Instagram feed.
+- [ ] User can load more posts once he or she reaches the bottom of the feed using endless scrolling.
+- [ ] User should switch between different tabs using fragments and a Bottom Navigation View.
+  - [ ] Feed Tab (to view all posts from all users)
+  - [ ] Capture Tab (to make a new post using the Camera and Photo Gallery)
+  - [ ] Profile Tab (to view only the current user's posts, in a grid)
+- [ ] Show the username and creation time for each post
+- User Profiles:
+  - [ ] Allow the logged in user to add a profile photo
+  - [ ] Display the profile photo with each post
+  - [ ] Tapping on a post's username or profile photo goes to that user's profile page
+  - [ ] User Profile shows posts in a grid
+- [ ] After the user submits a new post, show an indeterminate progress bar while the post is being uploaded to Parse
+- [ ] User can comment on a post and see all comments for each post in the post details screen.
+- [ ] User can like a post and see number of likes for each post in the post details screen.
 
-* Implement a recycler view or a cardview that has a list of stories with their titles and descriptions. 
-* When a user clicks on a story, we move to a more detailed view and the user has the option to listen to a podcast
-* Integration with the spotify API allows for podcasts
-* When displaying a podcast, the page is aesthetically pleasing
-* Include use of the camera
+The following **additional** features are implemented:
 
-**Optional Nice-to-have Stories**
+- [ ] List anything else that you can get done to improve the app functionality!
 
-* User can login and logout
-* Within their account, the user can get personalized recommendations. I can use item-item collaborative filtering to do this. 
-* Within a recyler view, some but not all podcasts have descriptions
-* User and like and comment on podcasts
+Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-### 2. Screen Archetypes
+1.
+2.
 
-* The app opens and the user sees a display of multiple stories.
-   * Using a cardview or a recycler view, the user will be able to see a variety of news stories, inclding titles, descriptions, and headings.
-* A more detailed view of a podcast
-   * After clicking on a podcast, the user sees a more detailed view of that podcast, and can plya the podcast if they choose to. 
-   * In this screen, the user can also like and comment on the podcast. 
-   
+## Video Walkthrough
 
-### 3. Navigation
+Here's a walkthrough of implemented user stories:
 
-**Tab Navigation** (Tab to Screen)
+<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-* Homepage of news stories
-* Search for a news story
+GIF created with [Kap](https://getkap.co/).
 
-**Flow Navigation** (Screen to Screen)
+## Credits
 
-* Front page of a newspaper
-   * Click on a story to see the details
-* A more detailed page of the podcast
-   * User can click start on the podcast to listen to it
+List an 3rd party libraries, icons, graphics, or other assets you used in your app.
 
-## Wireframes
-<img src="Screen Shot 2021-07-07 at 10.27.48 AM.png" width=600>
+- [Android Async Http Client](http://loopj.com/android-async-http/) - networking library
 
-### [BONUS] Digital Wireframes & Mockups
 
-### [BONUS] Interactive Prototype
+## Notes
 
-## Schema 
-[This section will be completed in Unit 9]
-### Models
-[Add table of models]
-### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+On this project, I learned how to integrate use of the camera, which was really interesting. I spent a long time trying to debug an issue with accessing the database, and the problem turned out to be an incorrect annotation. I remembered to label some member variables this time, although I did not have time to write unit tests. 
+
+## License
+
+    Copyright 2021 Emily Wesel
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
